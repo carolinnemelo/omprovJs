@@ -5,8 +5,10 @@
   
   function combineArrays(arr1, arr2) {
     // Din kod här.
- 
+    return arr1 = [...arr1,...arr2]
   }
+
+  // console.log(combineArrays([1,2], [3,4,5]))
   
 
 
@@ -21,13 +23,18 @@ const book = {
   rating: 4.5
 };
 
-function updateBookRating(book, newRating) {
-  // Din kod här.
 
+// function updateBook(obj) {
+  
+// }
+
+function updateBook(book, newRating) {
+  // Din kod här.
+  return book = {...book, rating: newRating}
 
 }
 
 
   //Test
-  //console.log(combineArrays([1, 2, 3], [4, 5, 6])); // Ska logga [1, 2, 3, 4, 5, 6]
-  //console.log(updateBook(book, 5)); // Ska logga { title: 'The Hobbit', author: 'J.R.R. Tolkien', year: 1937, rating: 5 }
+  // console.log(combineArrays([1, 2, 3], [4, 5, 6])); // Ska logga [1, 2, 3, 4, 5, 6]
+  console.log(updateBook(book, 5)); // Ska logga { title: 'The Hobbit', author: 'J.R.R. Tolkien', year: 1937, rating: 5 }

@@ -10,7 +10,7 @@ const tweets = [
 
 // Din kod här:
 
-
+const updatedTweets = tweets.filter(e => e.id !== 827364);
 
 
 // 8.2 (2p) Använd map för att skapa en ny array "tweetsHtml" med endast texten från varje tweet inom <li>-taggar (utgå från updatedTweets-arrayen)
@@ -19,13 +19,19 @@ const tweets = [
 
 // Din kod här:
 
+function displayTweets(updatedTweets) {
+  const tweetsHtml = updatedTweets.map(tweet => `<li>${tweet.text}</li>`).join(' ');
+  const ul = document.createElement('ul');
+  ul.id = 'tweets';
+  document.body.appendChild(ul);
+  ul.innerHTML = tweetsHtml; 
+  
+}
 
-
-
-
+displayTweets(updatedTweets);
 
 // Test
-console.log(updatedTweets); // Ska logga en array utan kommentaren med id 823423
+console.log(tweetsHtml); // Ska logga en array utan kommentaren med id 823423
 // [
 //   { text: 'Elon Musk is ...', id: 523423 },
 //   { text: 'The future of AI ...', id: 2039842 },

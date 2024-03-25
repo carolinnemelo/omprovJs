@@ -17,13 +17,46 @@
 
 // Klassen Chef
 
+class Chef {
+    constructor(fullname, recipes) {
+        this._fullname = fullname;
+        this._recipes = [];
 
+    }
+
+    get fullname() {
+        return this._fullname;
+    }
+
+
+    get recipes() {
+        return this._recipes;
+    }
+
+    learnRecipe(newRecipe){
+        this._recipes.push(newRecipe);
+    }
+
+    listRecipes() {
+        console.log(this._recipes.map(e => e._name).join(', '))
+    }
+}
 
 
 // Klassen Recipe
 
 
+class Recipe {
+    constructor(name, difficulty) {
+        this._name = name;
+        this._difficulty = difficulty;
 
+    }
+
+    getRecipeInfo() {
+        console.log(`${this._name}, Difficulty: ${this._difficulty}`)
+    }
+}
 
 
 
